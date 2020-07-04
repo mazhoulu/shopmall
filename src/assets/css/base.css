@@ -5,4 +5,8 @@
 body{
   color:orangered;
   font-size: 14px;
+  background:#fff;
+}
+a{
+  display: block;
 }
