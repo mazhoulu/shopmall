@@ -30,12 +30,23 @@
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  import {getHomeMultidata} from "../network/home";
+
+  export default {
+    name: 'HelloWorld',
+    props: {
+      msg: String
+    },
+    created() {
+      getHomeMultidata().then(res => {
+        console.log(res)
+      }).catch(err => {
+        alert(err)
+        // console.log(err)
+
+      })
+    }
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
